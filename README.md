@@ -7,58 +7,34 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Proceso seguido
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Se crea el proyecto en github.com y se obtiene su url: https://github.com/usuario/proyecto.git
+2. En Settings del Profile (https://github.com/settings/profile) se seleciona Developer settings (https://github.com/settings/apps).
+3. Se selecciona la opción Personal access tokens (https://github.com/settings/tokens).
+4. En esta pantalla se puede generar un token (Generate new token) o utilizar uno que exista. Es importante que el token tenga los permisos necesarios. También es importante guardar una copia del token.
+5. En la máquina local se descarga el proyecto que se ha creado en GitHub:
+6. git clone https://github.com/usuario/proyecto.git
+7. En esta misma carpeta se puede crear el proyecto de Laravel o, si el proyecto ya se ha creado, copiar el proyecto en la carpeta.
+8. Cada vez que se actualice el proyecto se deben introducir estas tres instrucciones:
+9. git add . --all
+10. git commit -m "comentario"
+11. git push
+12. Al hacer push se tiene que introducir el nombre de usuario o el correo electrónico y la clave, que es el Personal Access Token que se ha generado.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+En resumen:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```git=
+git clone https://github.com/usuario/proyecto.git
 
-## Learning Laravel
+git add . --all
+git commit -m "comentario"
+git push
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Si en el repositorio hubiera cambios que no se tienen en local, se pueden descargar esos cambios desde el repositorio mediante la siguiente instrucción:
+1. git pull
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Si se descarga el proyecto desde github, para obtener todas las dependencias del proyecto se ha de introducir la siguiente instrucción:
+1. composer install
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
