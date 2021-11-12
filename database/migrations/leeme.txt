@@ -1,0 +1,23 @@
+Creacion de la base de datos y de su usuario:
+
+1. crear la base de datos
+
+create database nombreBaseDatos default character set utf8 collate utf8_unicode_ci;
+
+Según la version de mysql:
+
+2. crear el usuario
+
+create user usuario@localhost identified with mysql_native_password by 'claveAcceso';
+
+o
+
+create user usuario@localhost identified by 'claveAcceso';
+
+3. asignar los permisos
+
+grant all on nombreBaseDatos.* to usuario@localhost;
+
+4. aplicar los privilegios
+
+flush privileges;

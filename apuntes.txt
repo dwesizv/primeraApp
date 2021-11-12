@@ -1,0 +1,5 @@
+tabla performance: id, nombre, genero, artista, presupuesto
+
+tabla place: id, nombre, aforo, presupuesto
+
+tabla event: id, idperformance, idlocal, fecha, preciopeformance, preciolocal, precioentrada
